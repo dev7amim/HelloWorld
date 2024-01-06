@@ -20,9 +20,11 @@ public class Decryption {
             charArray[i] = charArray[charArray.length - i - 1];
             charArray[charArray.length - i - 1] = temp;
         }
+        
+        StringBuilder decryption = new StringBuilder(new String(charArray));
+        decryption.append('!'); // Adding '!' at the end
 
-        String decryption = new String(charArray);
-        System.out.println(decryption);
+        System.out.println(decryption.toString());
     }
 }
 
